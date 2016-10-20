@@ -1,0 +1,42 @@
+.flip3d {
+	width: 140px;
+	height: 180px;
+	margin: 10px;
+	float: left;
+	cursor: pointer;
+}
+
+.flip3d > .front {
+	position: absolute;
+	background: #FC0;
+	width: 140px;
+	height: 180px;
+	border-radius: 10px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: perspective(600px) rotateY(0deg);
+	transform: perspective(600px) rotateY(0deg);
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+}
+
+.flip3d > .back {
+	position: absolute;
+	background: #80BFFF;
+	width: 140px;
+	height: 180px;
+	border-radius: 10px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: perspective(600px) rotateY(180deg);
+	transform: perspective(600px) rotateY(180deg);
+	transition: -webkit-transform .5s linear 0s;
+	transition: transform .5s linear 0s;
+}
+
+img{
+	position: absolute;
+	border-radius: 10px;
+	padding-top: 13px;
+	padding-left: 8px;
+}
